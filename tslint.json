@@ -1,9 +1,21 @@
 {
+  "extends": "tslint:latest",
   "rules": {
     "no-duplicate-variable": true,
     "no-unused-variable": [
       true
-    ]
+    ],
+    "no-console": false,
+    "no-empty": false,
+    "quotemark": {
+        "options": [
+            "single",
+            "avoid-escape"
+        ]
+    },
+    "indent": {
+      "options": ["tabs", 2]
+    }
   },
   "rulesDirectory": [
     "node_modules/tslint-eslint-rules/dist/rules"

@@ -1,30 +1,31 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-
+import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { CoreModule } from './core/core.module';
 
+// import { HomeModule } from './pages/home/home.module';
+// import { LoginModule } from './pages/login/login.module';
+// import { TabsModule } from './pages/tabs/tabs.module';
 @NgModule({
-  declarations: [
-    MyApp,
-    HomePage
-  ],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp)
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage
-  ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+	declarations: [
+		MyApp,
+	],
+	imports: [
+		BrowserModule,
+		CoreModule,
+		// TabsModule,
+		// LoginModule,
+		// HomeModule,
+		IonicModule.forRoot(MyApp),
+	],
+	// tslint:disable-next-line:object-literal-sort-keys
+	bootstrap: [IonicApp],
+	entryComponents: [
+		MyApp,
+	],
+	providers: [
+
+	],
 })
 export class AppModule {}
